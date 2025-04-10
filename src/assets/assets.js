@@ -203,3 +203,14 @@ export const products = [
     main_actor: "Various",
   },
 ];
+
+export const saveContactData = [
+  {
+    firstName: "Shravani",
+    lastName: "Kardekar",
+    email: 'someemail',
+    orderNumber: '',
+    feedbackType: 'General Feedback',
+    message: ''
+  }
+];

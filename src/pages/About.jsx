@@ -1,77 +1,82 @@
 import React from 'react';
-import { assets } from '../assets/assets'; // Adjust path if necessary
+import { assets } from '../assets/assets'; // Adjust the path as needed
 
 const About = () => {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-6">Showtime: Movie Ticket Booking Platform</h1>
-      {assets.logo && <img className="mb-4" src={assets.logo} alt="Showtime Logo" />}
+    <div className="bg-red-700 py-12 rounded-lg">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <header className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-slate-100 mb-4">
+            Showtime: Movie Ticket Booking Platform
+          </h1>
+          <img
+            src={assets.logo} // Use your logo here
+            alt="Showtime Logo"
+            className="mx-auto h-25 mb-4 rounded-lg" // Adjust size as needed
+          />
+        </header>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-        <p className="mb-4">
-          Showtime is a web-based application designed to streamline the process of purchasing movie tickets online. It provides users with an interface to:
-        </p>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            <p>
-              Browse a comprehensive catalog of movies: Users can explore currently playing and upcoming films,
-              complete with essential details like titles, posters, descriptions, and ratings or reviews.
-            </p>
-          </li>
-          <li>
-            <p>
-              Access showtime information: The platform offers listings of available movies at theaters,
-              including release dates and director information, allowing users to select convenient showtimes.
-            </p>
-          </li>
-          <li>
-            <p>
-              Visually select seating arrangements: Showtime incorporates an interactive seat selection feature,
-              enabling users to choose their preferred seats within a theater's seating chart.
-            </p>
-          </li>
-          <li>
-            <p>
-              Manage bookings and transactions: Users can add selected tickets to a virtual cart, review their
-              order, and proceed through a checkout process that includes taxes and online fees.
-            </p>
-          </li>
-          <li>
-            <p>
-              Manage user authentication and profiles: The system includes user authentication features
-              (login/registration) to manage user accounts, booking history, and profile information.
-            </p>
-          </li>
-          <li>
-            <p>
-              Search and filter movies: Showtime allows users to efficiently find movies of interest using
-              search functionality and filtering options based on criteria such as heroes, directors, release dates,
-              or movie names.
-            </p>
-          </li>
-        </ul>
-      </section>
+        {/* Introduction Section */}
+        <section className="bg-white shadow-md rounded-lg p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Introduction</h2>
+          <p className="text-gray-700 mb-4">
+          "Showtime" is a web-based application designed to streamline the process of purchasing movie tickets online.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Platform Features:</h2>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            <p>User-centered design: Creating an intuitive and user-friendly experience for effortless movie ticket booking.</p>
-          </li>
-          <li>
-            <p>Component-based architecture: Utilizing reusable React components to build a modular and maintainable front-end.</p>
-          </li>
-          <li>
-            <p>State management: Efficiently handling data and user interactions within the application.</p>
-          </li>
-          <li>
-            <p>Responsive design: Ensuring the platform is accessible and functional across various devices (desktops, tablets, and mobile phones).</p>
-          </li>
-        </ul>
-      </section>
+        {/* Purpose Section */}
+        <section className="bg-white shadow-md rounded-lg p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Purpose of the Project 1
+          </h2>
+          <p className="text-gray-700 mb-4">
+            The primary aim of these projects is to enhance our understanding of how sophisticated
+            software systems are built using industry-standard technologies. By engaging in the
+            development of a front-end interface and back-end integration, explore the
+            critical processes of modern software development, testing, and deployment.
+          </p>
+        </section>
+
+        {/* Front-End Development (Project #1) Section */}
+        <section className="bg-white shadow-md rounded-lg p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Front-End Development (Project #1)
+          </h2>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">Key Concepts</h3>
+          <ul className="list-disc list-inside text-gray-600 mb-4">
+            <li>
+              Component-Based Architecture: Learn how modern UI is constructed using reusable
+              components in React.
+            </li>
+            <li>
+              State Management: Implement state handling techniques for dynamic user interfaces.
+            </li>
+            <li>
+              Testing Fundamentals: Apply unit testing principles to ensure code quality and
+              functionality.
+            </li>
+          </ul>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">Project Requirements</h3>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>
+              Component Structure: Implement a minimum of 8 reusable React components.
+            </li>
+            <li>Routing and Navigation: Implement React Router with specified routes.</li>
+            <li>State Management: Use appropriate state management techniques.</li>
+            {/* ... other requirements ... */}
+          </ul>
+        </section>
+
+        {/* Add more sections as needed, following the same structure */}
+
+        {/* Footer (If not in App.jsx) */}
+        {/* <footer className="text-center mt-12 py-4 border-t text-gray-500">
+          <p>Showtime :: Your Name</p>
+        </footer> */}
+      </div>
     </div>
   );
 };
 
-export default About
+export default About;
