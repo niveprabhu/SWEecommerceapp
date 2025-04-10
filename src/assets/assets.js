@@ -15,6 +15,8 @@ import search_icon from './search.png'
 import profile_icon from './profile.png'
 import cart_icon from './cart.png'
 import menu_icon from './menu.png'
+import thunderbolts from './thunderbolts.png'
+import dropdown_icon from './dropdown.png'
 
 export const assets = 
 {
@@ -30,7 +32,8 @@ export const assets =
     multiverseofmadness,
     quantumania,
     ragnarok,
-    wakandaforever
+    wakandaforever,
+    thunderbolts
 }
 
 export const icons = 
@@ -38,7 +41,8 @@ export const icons =
   search_icon,
   profile_icon,
   cart_icon,
-  menu_icon
+  menu_icon,
+  dropdown_icon
 }
 
 export const products = [
@@ -160,6 +164,16 @@ export const products = [
     image: [wakandaforever],
     category: "Solo",
     releasedate: "November 11, 2022",
+    bestseller: true
+  },
+  {
+    id: "3014",
+    Name: "Thunderbolts",
+    Description: "A team of misfit antiheroes from across the MCU are brought together for a high-stakes government mission. Led by familiar faces with shady pasts, the Thunderbolts must prove they can be more than the sum of their flaws.",
+    ticketprice: 20,
+    image: [thunderbolts],
+    category: "Team",
+    releasedate: "July 25, 2025",
     bestseller: true
   }
 ];

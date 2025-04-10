@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { products } from '../assets/assets';
 import Selectseat from './selectseat';
 import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
 
 const Home = () => {
   const [filter, setFilter] = useState('All');
@@ -20,6 +21,9 @@ const Home = () => {
 
   return (
     <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen">
+      <div>
+        <Hero />
+      </div>
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">
         Now Showing
       </h1>
@@ -33,7 +37,7 @@ const Home = () => {
           Filter: {filter}
         </button>
         {dropdownOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 shadow-md rounded z-20">
+          <div className="text-white absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 shadow-md rounded z-20">
             {['All', 'Solo', 'Team'].map((type) => (
               <div
                 key={type}
