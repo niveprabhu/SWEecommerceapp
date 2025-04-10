@@ -54,7 +54,9 @@ export const products = [
     image: [antman],
     category: "Solo",
     releasedate: "July 17, 2015",
-    bestseller: false
+    bestseller: false,
+    director: "Peyton Reed",
+    main_actor: "Paul Rudd",
   },
   {
     id: "3002",
@@ -64,7 +66,9 @@ export const products = [
     image: [avengers],
     category: "Team",
     releasedate: "May 4, 2012",
-    bestseller: false
+    bestseller: false,
+    director: "Joss Whedon",
+    main_actor: "Various",
   },
   {
     id: "3003",
@@ -74,7 +78,9 @@ export const products = [
     image: [blackpanther],
     category: "Solo",
     releasedate: "February 16, 2018",
-    bestseller: true
+    bestseller: true,
+    director: "Ryan Coogler",
+    main_actor: "Chadwick Boseman",
   },
   {
     id: "3004",
@@ -84,7 +90,9 @@ export const products = [
     image: [ca1],
     category: "Solo",
     releasedate: "July 22, 2011",
-    bestseller: false
+    bestseller: false,
+    director: "Joe Johnston",
+    main_actor: "Chris Evans",
   },
   {
     id: "3005",
@@ -94,7 +102,9 @@ export const products = [
     image: [drstrange],
     category: "Solo",
     releasedate: "November 4, 2016",
-    bestseller: false
+    bestseller: false,
+    director: "Scott Derrickson",
+    main_actor: "Benedict Cumberbatch",
   },
   {
     id: "3006",
@@ -104,7 +114,9 @@ export const products = [
     image: [infinitywar],
     category: "Team",
     releasedate: "April 27, 2018",
-    bestseller: true
+    bestseller: true,
+    director: "Anthony Russo, Joe Russo",
+    main_actor: "Various",
   },
   {
     id: "3007",
@@ -114,7 +126,9 @@ export const products = [
     image: [ironman3],
     category: "Solo",
     releasedate: "May 3, 2013",
-    bestseller: false
+    bestseller: false,
+    director: "Shane Black",
+    main_actor: "Robert Downey Jr.",
   },
   {
     id: "3008",
@@ -124,7 +138,9 @@ export const products = [
     image: [legoavengers],
     category: "Team",
     releasedate: "November 16, 2015",
-    bestseller: false
+    bestseller: false,
+    director: "Rob Silvestri",
+    main_actor: "Various",
   },
   {
     id: "3009",
@@ -134,7 +150,9 @@ export const products = [
     image: [multiverseofmadness],
     category: "Solo",
     releasedate: "May 6, 2022",
-    bestseller: true
+    bestseller: true,
+    director: "Sam Raimi",
+    main_actor: "Benedict Cumberbatch",
   },
   {
     id: "3010",
@@ -144,7 +162,9 @@ export const products = [
     image: [quantumania],
     category: "Solo",
     releasedate: "February 17, 2023",
-    bestseller: false
+    bestseller: false,
+    director: "Peyton Reed",
+    main_actor: "Paul Rudd",
   },
   {
     id: "3011",
@@ -154,7 +174,9 @@ export const products = [
     image: [ragnarok],
     category: "Solo",
     releasedate: "November 3, 2017",
-    bestseller: true
+    bestseller: true,
+    director: "Taika Waititi",
+    main_actor: "Chris Hemsworth",
   },
   {
     id: "3012",
@@ -164,7 +186,9 @@ export const products = [
     image: [wakandaforever],
     category: "Solo",
     releasedate: "November 11, 2022",
-    bestseller: true
+    bestseller: true,
+    director: "Ryan Coogler",
+    main_actor: "Letitia Wright",
   },
   {
     id: "3014",
@@ -174,6 +198,8 @@ export const products = [
     image: [thunderbolts],
     category: "Team",
     releasedate: "July 25, 2025",
-    bestseller: true
-  }
+    bestseller: true,
+    director: "Jake Schreier",
+    main_actor: "Various",
+  },
 ];

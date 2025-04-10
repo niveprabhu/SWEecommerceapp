@@ -11,8 +11,8 @@ const SelectSeat = () => {
   const rows = ['A', 'B', 'C', 'D', 'E'];
   const cols = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const seatPrice = products.ticketprice;
-  //const totalPrice = (selectedSeats.length) * seatPrice;
+  const seatPrice = movie?.ticketprice || 0;
+  const totalPrice = (selectedSeats.length) * seatPrice;
  
 
   const handleSeatClick = (seat) => {
@@ -25,14 +25,18 @@ const SelectSeat = () => {
 
   const navigate = useNavigate();
 
-const handleConfirmBooking = () => {
-  navigate('/cart', {
-    state: {
-      movie,
-      selectedSeats,
-      subtotal: selectedSeats.length * products.ticketprice
+  const handleConfirmBooking = () => {
+    if (movie) {
+      navigate('/cart', {
+        state: {
+          movie,
+          selectedSeats,
+          subtotal: selectedSeats.length * movie.ticketprice,
+        },
+      });
+    } else {
+      console.error("Movie data not found for ID:", id);
     }
-  });
 };
 
 
@@ -66,12 +70,14 @@ const handleConfirmBooking = () => {
 
       {/* Right: Movie Info & Summary */}
       <div className="w-full lg:w-1/3 p-4 rounded bg-gray-100 dark:bg-gray-800 shadow-lg">
-        <img src={products.image} alt={products.Name} className="w-full h-48 object-cover rounded mb-4" />
-        <h3 className="text-xl font-bold mb-2">{products.Name}</h3>
-        <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">{products.Description}</p>
-        <p className="mb-2">Price: <strong>${products.ticketprice}</strong> per seat</p>
+      {movie?.image && movie.image[0] && (
+        <img src={movie.image[0]} alt={movie.Name} className="w-full h-48 object-cover rounded mb-4" />
+      )}
+        <h3 className="text-xl font-bold mb-2">{movie?.Name}</h3>
+        <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">{movie?.Description}</p>
+        <p className="mb-2">Price: <strong>${seatPrice}</strong> per seat</p>
         <p className="mb-2">🎟️ Selected Seats: {selectedSeats.join(', ') || 'None'}</p>
-        <p className="mb-4 font-semibold">🧾 Total: ${(selectedSeats.length) * (products.ticketprice)}</p>
+        <p className="mb-4 font-semibold">🧾 Subtotal: ${totalPrice.toFixed(2)}</p>
         <Link to = '/cart'>
         <button disabled={selectedSeats.length === 0} onClick = {handleConfirmBooking}
         className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 disabled:opacity-50">
