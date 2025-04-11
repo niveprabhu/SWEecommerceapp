@@ -6,7 +6,7 @@ import About from './pages/About'
 import Cart from './pages/cart'
 import Login from './pages/login'
 import Orders from './pages/orders'
-import Selectseat from './pages/selectseat'
+import SelectSeat from './pages/selectseat'
 import Contact from './pages/contact'
 import Navbar from './components/Navbar'
 import MyProfile from './pages/MyProfile'
@@ -22,7 +22,7 @@ const App = () => {
         <Route path='/movie' element={<Movie/>} />
         <Route path='/movie/:id' element = {<Movie/>} />
         <Route path='/orders' element={<Orders/>} />
-        <Route path='/selectseat/:id' element={<Selectseat/>} />
+        <Route path='/selectseat/:id' element={<SelectSeat/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/myprofile' element={<MyProfile/>} />
         <Route path='/about' element={<About />} />

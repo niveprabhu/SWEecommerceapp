@@ -68,12 +68,7 @@ const About = () => {
           </ul>
         </section>
 
-        {/* Add more sections as needed, following the same structure */}
-
-        {/* Footer (If not in App.jsx) */}
-        {/* <footer className="text-center mt-12 py-4 border-t text-gray-500">
-          <p>Showtime :: Your Name</p>
-        </footer> */}
+        {/* Add more sections as needed, (ADD REFERENCES!!! ) following the same structure */}
       </div>
     </div>
   );

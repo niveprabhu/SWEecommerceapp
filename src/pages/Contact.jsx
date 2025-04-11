@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-red-700 py-12 rounded-xl">
       <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden md:max-w-lg">
         <div className="md:flex">
           <div className="w-full p-8">
@@ -145,7 +145,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Submit

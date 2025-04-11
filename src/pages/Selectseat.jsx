@@ -5,15 +5,11 @@ import { products } from '../assets/assets';
 const SelectSeat = () => {
   const { id } = useParams();
   const movie = products.find((m) => m.id.toString() === id);
-
   const [selectedSeats, setSelectedSeats] = useState([]);
-
   const rows = ['A', 'B', 'C', 'D', 'E'];
   const cols = Array.from({ length: 10 }, (_, i) => i + 1);
-
   const seatPrice = movie?.ticketprice || 0;
   const totalPrice = (selectedSeats.length) * seatPrice;
- 
 
   const handleSeatClick = (seat) => {
     setSelectedSeats((prev) =>
@@ -41,7 +37,7 @@ const SelectSeat = () => {
 
 
   return (
-    <div className="p-6 flex flex-col lg:flex-row gap-8 dark:bg-gray-900 min-h-screen text-black dark:text-white">
+    <div className="p-6 flex flex-col lg:flex-row gap-8 dark:bg-gray-900 min-h-screen text-black dark:text-white rounded-xl">
       {/* Left: Seating Chart */}
       <div className="flex-1">
         <h2 className="text-2xl font-semibold mb-4">Select Your Seats</h2>
@@ -66,6 +62,9 @@ const SelectSeat = () => {
             })
           )}
         </div>
+        <div className='flex items-center justify-between'>
+          
+        </div>
       </div>
 
       {/* Right: Movie Info & Summary */}
@@ -75,9 +74,15 @@ const SelectSeat = () => {
       )}
         <h3 className="text-xl font-bold mb-2">{movie?.Name}</h3>
         <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">{movie?.Description}</p>
-        <p className="mb-2">Price: <strong>${seatPrice}</strong> per seat</p>
-        <p className="mb-2">🎟️ Selected Seats: {selectedSeats.join(', ') || 'None'}</p>
-        <p className="mb-4 font-semibold">🧾 Subtotal: ${totalPrice.toFixed(2)}</p>
+        <p className='mb-2'>Director: <span className='font-semibold'>{movie?.director}</span></p>
+        <p className='mb-2'>Actors: <span className='font-semibold'>{movie?.main_actor?.join(', ')}</span></p>
+        <p className='mb-4'>Price: <strong className='text-red-500'>${seatPrice}</strong> per seat</p>
+        <p className='mb-2'>
+            Selected Seats: {selectedSeats.join(', ') || 'None'}
+          </p>
+          <p className='mb-2 text-lg font-semibold'>
+            Subtotal: ${totalPrice.toFixed(2)}
+          </p>
         <Link to = '/cart'>
         <button disabled={selectedSeats.length === 0} onClick = {handleConfirmBooking}
         className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 disabled:opacity-50">

@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen rounded-lg">
       <div>
         <Hero />
       </div>
